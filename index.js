@@ -1,7 +1,9 @@
-fetch('https://api.cryptonator.com/api/ticker/btc-usd')
-	.then((res) => {
-		console.log('response', res);
-	})
-	.catch((e) => {
-		console.log('erroer!', e);
-	});
+const fetchBitcoinPrice = async () => {
+	try {
+		const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd');
+		console.log(res.data.ticker.price);
+	} catch (e) {
+		console.log('ERROR', e);
+	}
+};
+fetchBitcoinPrice();
