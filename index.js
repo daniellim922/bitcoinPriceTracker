@@ -3,5 +3,5 @@ fetch('https://api.cryptonator.com/api/ticker/btc-usd')
 		console.log('response', res);
 	})
 	.catch((e) => {
-		console.log('oh no error!', e);
+		console.log('erroer!', e);
 	});
